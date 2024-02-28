@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Franz Iannucci</title>
-	<!-- css files -->
+	<!-- CSS files -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -11,6 +11,57 @@
 	<link rel="icon" type="image/x-icon" href="assets/img/logo_favicon.png">
 	<meta name="author" content="Hassan Ali">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		/* Effetto ombra sottile */
+		.avatar {
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombra sottile */
+			border-radius: 50%; /* Rendiamo l'immagine del profilo circolare */
+			transition: all 0.3s ease-in-out; /* Animazione generale con durata di 0.3 secondi */
+		}
+
+		/* Effetto zoom al passaggio del mouse */
+		.avatar:hover {
+			transform: scale(1.05); /* Effetto di zoom */
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Ombra più accentuata al passaggio del mouse */
+		}
+
+		/* Wrapper per centrare l'immagine e la descrizione */
+		.profile-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+			margin-bottom: 20px; /* Aggiungi spazio tra l'immagine e la descrizione */
+			border-radius: 10px; /* Bordi arrotondati */
+			transition: all 0.3s ease-in-out; /* Animazione generale con durata di 0.3 secondi */
+		}
+
+		/* Effetto zoom al passaggio del mouse per il wrapper */
+		.profile-wrapper:hover {
+			transform: translateY(-5px); /* Solleva leggermente il wrapper */
+			box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Ombra più accentuata al passaggio del mouse */
+		}
+
+		/* Stile per la descrizione */
+		.description {
+			text-align: center;
+			margin-top: 10px; /* Aggiungi spazio sopra la descrizione */
+			line-height: 1.5; /* Altezza delle righe */
+		}
+
+		/* Aggiungi transizione ai box */
+		.box {
+			transition: all 0.3s ease-in-out; /* Animazione generale con durata di 0.3 secondi */
+		}
+
+		/* Effetto zoom al passaggio del mouse per i box */
+		.box:hover {
+			transform: translateY(-5px); /* Solleva leggermente il box */
+			box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Ombra più accentuata al passaggio del mouse */
+		}
+	</style>
 </head>
 <body>
 <!-- Navbar -->
@@ -43,14 +94,15 @@
 
 <!-- About Me -->
 <section id="about" class="section section-1">
-	<div class="container has-text-centered">
-		<!-- Source: https://flic.kr/p/pAZBNK -->
-		<img class="avatar" src="assets/img/profile_pic.jpg">
-	</div>
-	<div class="container"></br>
-		<p class="intro">
-			Hi there, I'm Franz Iannucci! A biology student by profession, but an avid computer enthusiast at heart. Navigating the realms of cells and code with equal fervor, I'm on a quest to merge biology and technology in innovative ways. Let's explore the intersections of these fascinating fields together.
-		</p>
+	<div class="container">
+		<div class="profile-wrapper">
+			<!-- Source: https://flic.kr/p/pAZBNK -->
+			<img class="avatar" src="assets/img/profile_pic.jpg">
+			<p class="description">
+				Hi, I am Franz,<br>
+				A biology student by profession, but an avid computer enthusiast at heart. Navigating the realms of cells and code with equal fervor, I'm on a quest to merge biology and technology in innovative ways. Let's explore the intersections of these fascinating fields together.
+			</p>
+		</div>
 	</div>
 </section>
 
@@ -179,16 +231,11 @@
 	</div>
 </section>
 
-
-
-
-
 <!-- Footer -->
 <section class="section-6 has-text-centered container">
 	<a href="https://beacons.ai/ianfra">SHARE MY BEACON! - Franz Iannucci</a>
 </section>
 
-<!-- Scripts  -->
-<script src="controller.js"></script>
+
 </body>
 </html>
