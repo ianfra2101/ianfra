@@ -1,18 +1,21 @@
-html, body{
-	font-size:16px;
+html, body {
+	font-size: 16px;
 	color: #dfdfdf;
-	background-color: #063647; 
+	background-color: #063647;
+	scroll-behavior: smooth;
+	transition: background-color 0.5s ease;
 }
 
 a {
-  color: #00d1b2;
+	color: #00d1b2;
+	transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #00d1b2;
+	color: #fff;
 }
 
-section{
+section {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 }
@@ -33,6 +36,38 @@ section{
 	background-color: #063647;
 	padding: 0.2rem;
 }
+/* Aggiungi questi stili al tuo file CSS */
+.section-5 {
+	background-color: #1c1c1c;
+	color: #ffffff;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.section-5 .box {
+	background-color: transparent;
+	border: 2px solid #ffffff;
+}
+
+.section-5 .box .content {
+	padding: 2rem;
+}
+
+.section-5 .social-links {
+	margin-top: 1rem;
+}
+
+.section-5 .social-link {
+	font-size: 2rem;
+	color: #ffffff;
+	margin: 0 0.5rem;
+	transition: all 0.3s ease;
+}
+
+.section-5 .social-link:hover {
+	transform: scale(1.2);
+}
+
 
 a.nav-item {
 	color: #dfdfdf;
@@ -42,19 +77,19 @@ a.nav-item:hover {
 	color: #fff;
 }
 
-.avatar{
-	height:200px;
+.avatar {
+	height: 200px;
 	border-radius: 50%;
 }
 
-.intro-description{
+.intro-description {
 	padding-top: 1rem;
 }
 
-.social-container img{
-	max-width:100%;
-	max-height:175px;
-	margin-bottom:15px;
+.social-container img {
+	max-width: 100%;
+	max-height: 175px;
+	margin-bottom: 15px;
 }
 
 .project-figure {
@@ -76,6 +111,7 @@ a.nav-item:hover {
 	color: #fff;
 	text-align: left;
 	margin-bottom: 2rem;
+	transition: color 0.3s ease;
 }
 
 .intro {
@@ -85,7 +121,7 @@ a.nav-item:hover {
 }
 
 .void-background {
-	background-color: transparent; 
+	background-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
@@ -104,5 +140,5 @@ a.nav-item:hover {
 	.nav-toggle span:hover {
 		background-color: #fff;
 	}
-
 }
+
