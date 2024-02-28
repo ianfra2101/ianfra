@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Franz Iannucci</title>
 	<!-- CSS files -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -61,6 +63,36 @@
 			transform: translateY(-5px); /* Solleva leggermente il box */
 			box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Ombra più accentuata al passaggio del mouse */
 		}
+
+		/* Stile per il terminale */
+		.terminal-box {
+			background-color: #063646; /* Cambiato in colore richiesto */
+			color: white; /* Testo bianco */
+			padding: 20px;
+			border-radius: 5px;
+			margin-top: 20px;
+			overflow: hidden;
+			text-align: center; /* Centra il testo */
+			font-family: 'Courier New', monospace; /* Utilizzo del font monospace per l'aspetto terminale */
+			font-size: 24px; /* Dimensione del carattere aumentata */
+			line-height: 1.5; /* Altezza delle righe */
+		}
+
+		.terminal-text {
+			animation: typing 3s steps(40) forwards; /* Aumenta la durata dell'animazione */
+			border-right: .1em solid;
+			padding-right: 8px;
+			margin: 0 auto;
+			white-space: pre-line; /* Gestisce correttamente la nuova riga (\n) */
+			overflow: hidden;
+			max-width: 100%;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0
+			}
+		}
 	</style>
 </head>
 <body>
@@ -81,15 +113,16 @@
 		<a class="nav-item" href="#about">About</a>
 		<a class="nav-item" href="#projects">Works & Projects</a>
 		<a class="nav-item" href="#additional">Hobbies</a>
+		<a class="nav-item" href="#contact">Contact Me</a>
 	</div>
 
 	<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
 	<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
 	<span class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
 </nav>
 
 <!-- About Me -->
@@ -98,9 +131,12 @@
 		<div class="profile-wrapper">
 			<!-- Source: https://flic.kr/p/pAZBNK -->
 			<img class="avatar" src="assets/img/profile_pic.jpg">
+			<div class="terminal-box">
+				<div class="terminal-text">
+					<h2 style="font-size: 36px;">Hi, I am Franz</h2>
+				</div>
+			</div>
 			<p class="description">
-				Hi, I am Franz,<br>
-				A biology student by profession, but an avid computer enthusiast at heart. Navigating the realms of cells and code with equal fervor, I'm on a quest to merge biology and technology in innovative ways. Let's explore the intersections of these fascinating fields together.
 			</p>
 		</div>
 	</div>
@@ -112,15 +148,13 @@
 		<div class="has-text-centered">
 			<h3 class="title is-3">My Works and Projects</h3>
 		</div>
-
 		<div class="columns is-multiline is-desktop">
-			<!-- Project 1 -->
 			<div class="column">
 				<div class="box project-text">
 					<article>
 						<div>
 							<figure class="image project-figure">
-								<img src="assets/img/logo_progetto_1.png" alt="Image">
+								<img src="assets/img/logo_progetto_1.png" alt="Project 1">
 							</figure>
 						</div>
 						<div>
@@ -131,13 +165,12 @@
 					</article>
 				</div>
 			</div>
-			<!-- Project 2 -->
 			<div class="column">
 				<div class="box project-text">
 					<article>
 						<div>
 							<figure class="image project-figure">
-								<img src="assets/img/logo_progetto_2.png" alt="Image">
+								<img src="assets/img/logo_progetto_2.png" alt="Project 2">
 							</figure>
 						</div>
 						<div>
@@ -158,7 +191,6 @@
 		<div class="has-text-centered">
 			<h3 class="title is-3">Hobbies</h3>
 		</div>
-
 		<div class="columns is-multiline is-desktop">
 			<div class="column">
 				<div class="box additional-box">
@@ -213,7 +245,7 @@
 			<div class="column is-half">
 				<div class="box">
 					<article>
-						<div class="content has-text-centered">
+						<div class="content has-text-centered" style="color: white;"> <!-- Aggiunto il colore del testo bianco -->
 							<p>Contact me or explore my works:</p>
 							<div class="social-links">
 								<a href="https://github.com/ianfra2101" class="social-link" target="_blank">
@@ -231,11 +263,28 @@
 	</div>
 </section>
 
+
 <!-- Footer -->
 <section class="section-6 has-text-centered container">
 	<a href="https://beacons.ai/ianfra">SHARE MY BEACON! - Franz Iannucci</a>
 </section>
 
+<script>
+	const aboutText = "A biology student by profession, but an avid computer enthusiast at heart. Navigating the realms of cells and code with equal fervor, I'm on a quest to merge biology and technology in innovative ways. Let's explore the intersections of these fascinating fields together.";
 
+	let index = 0;
+	const speed = 25; // Imposta la velocità desiderata in millisecondi per carattere
+
+	function writeText() {
+		const aboutElement = document.querySelector('.terminal-text');
+		if (index < aboutText.length) {
+			aboutElement.innerHTML += aboutText.charAt(index);
+			index++;
+			setTimeout(writeText, speed);
+		}
+	}
+
+	writeText();
+</script>
 </body>
 </html>
