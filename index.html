@@ -28,6 +28,13 @@
 			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Ombra più accentuata al passaggio del mouse */
 		}
 
+		/* Cornice attorno all'avatar */
+		.avatar-frame {
+			border: 4px solid #063646; /* Colore della cornice */
+			border-radius: 50%; /* Forma circolare */
+			overflow: hidden; /* Nasconde eventuali contenuti fuori dalla cornice */
+		}
+
 		/* Wrapper per centrare l'immagine e la descrizione */
 		.profile-wrapper {
 			display: flex;
@@ -133,7 +140,9 @@
 	<div class="container">
 		<div class="profile-wrapper">
 			<!-- Source: https://flic.kr/p/pAZBNK -->
-			<img class="avatar" src="assets/img/profile_pic.jpg">
+			<div class="avatar-frame">
+				<img class="avatar" src="assets/img/profile_pic.jpg">
+			</div>
 			<div class="terminal-box">
 				<div class="terminal-text">
 					<h2 style="font-size: 36px;">Hi, I am Franz</h2>
@@ -280,7 +289,7 @@
 </section>
 
 <script>
-	const aboutText = "A biology student by profession, but an avid computer enthusiast at heart. Navigating the realms of cells and code with equal fervor, I'm on a quest to merge biology and technology in innovative ways. Let's explore the intersections of these fascinating fields together.";
+	const aboutText = "Biologist by day, coding enthusiast by night! Navigating through cells and code with equal zeal, I'm on a mission to merge biology and tech in exciting ways. Let's explore this awesome crossover together!";
 
 	let index = 0;
 	const speed = 25; // Imposta la velocità desiderata in millisecondi per carattere
@@ -294,7 +303,26 @@
 		}
 	}
 
-	writeText();
+	document.addEventListener('DOMContentLoaded', function () {
+		const aboutSection = document.getElementById('about');
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				const id = entry.target.getAttribute('id');
+				if (entry.intersectionRatio > 0) {
+					document.querySelector(`nav a[href="#${id}"]`).parentElement.classList.add('is-active');
+				} else {
+					document.querySelector(`nav a[href="#${id}"]`).parentElement.classList.remove('is-active');
+				}
+			});
+		});
+
+		// Track all sections that have an `id` applied
+		document.querySelectorAll('section[id]').forEach((section) => {
+			observer.observe(section);
+		});
+
+		writeText();
+	});
 </script>
 </body>
 </html>
