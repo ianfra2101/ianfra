@@ -1,5 +1,6 @@
-# Mac auto-generated .DS_Store files
-.DS_STORE
-
-# Webstorm project metadata
-.idea/
+# Firebase Stuff
+*.log
+firebase.json
+public/
+.firebaserc
+.firebase/

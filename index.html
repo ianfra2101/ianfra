@@ -1,328 +1,221 @@
 <!DOCTYPE html>
+<!-- Using multiple languages is possible, but the page is english only atm -->
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Franz Iannucci</title>
-	<!-- CSS files -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-
-	<link rel="icon" type="image/x-icon" href="assets/img/logo_favicon.png">
-	<meta name="author" content="Hassan Ali">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<style>
-		/* Effetto ombra sottile */
-		.avatar {
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombra sottile */
-			border-radius: 50%; /* Rendiamo l'immagine del profilo circolare */
-			transition: all 0.3s ease-in-out; /* Animazione generale con durata di 0.3 secondi */
-		}
-
-		/* Effetto zoom al passaggio del mouse */
-		.avatar:hover {
-			transform: scale(1.05); /* Effetto di zoom */
-			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Ombra più accentuata al passaggio del mouse */
-		}
-
-		/* Cornice attorno all'avatar */
-		.avatar-frame {
-			border: 4px solid #063646; /* Colore della cornice */
-			border-radius: 50%; /* Forma circolare */
-			overflow: hidden; /* Nasconde eventuali contenuti fuori dalla cornice */
-		}
-
-		/* Wrapper per centrare l'immagine e la descrizione */
-		.profile-wrapper {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			padding: 20px;
-			margin-bottom: 20px; /* Aggiungi spazio tra l'immagine e la descrizione */
-			border-radius: 10px; /* Bordi arrotondati */
-			transition: all 0.3s ease-in-out; /* Animazione generale con durata di 0.3 secondi */
-		}
-
-		/* Effetto zoom al passaggio del mouse per il wrapper */
-		.profile-wrapper:hover {
-			transform: translateY(-5px); /* Solleva leggermente il wrapper */
-			box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Ombra più accentuata al passaggio del mouse */
-		}
-
-		/* Stile per la descrizione */
-		.description {
-			text-align: center;
-			margin-top: 10px; /* Aggiungi spazio sopra la descrizione */
-			line-height: 1.5; /* Altezza delle righe */
-		}
-
-		/* Aggiungi transizione ai box */
-		.box {
-			transition: all 0.3s ease-in-out; /* Animazione generale con durata di 0.3 secondi */
-		}
-
-		/* Effetto zoom al passaggio del mouse per i box */
-		.box:hover {
-			transform: translateY(-5px); /* Solleva leggermente il box */
-			box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Ombra più accentuata al passaggio del mouse */
-		}
-
-		/* Stile per il terminale */
-		.terminal-box {
-			background-color: #063646; /* Cambiato in colore richiesto */
-			color: white; /* Testo bianco */
-			padding: 20px;
-			border-radius: 5px;
-			margin-top: 20px;
-			overflow: hidden;
-			text-align: center; /* Centra il testo */
-			font-family: 'Courier New', monospace; /* Utilizzo del font monospace per l'aspetto terminale */
-			font-size: 24px; /* Dimensione del carattere aumentata */
-			line-height: 1.5; /* Altezza delle righe */
-		}
-
-		.terminal-text {
-			animation: typing 3s steps(40) forwards; /* Aumenta la durata dell'animazione */
-			border-right: .1em solid;
-			padding-right: 8px;
-			margin: 0 auto;
-			white-space: pre-line; /* Gestisce correttamente la nuova riga (\n) */
-			overflow: hidden;
-			max-width: 100%;
-		}
-
-		@keyframes typing {
-			from {
-				width: 0
-			}
-		}
-	</style>
+  <meta charset="utf-8">
+  <!-- Title in the browser tab -->
+  <title>f.r.a.n.z.</title>
+  <!-- Description used when the site is added to favorites -->
+  <meta name="description" content="m.i.n.a.r. official site.">
+  <meta name="author" content="m.i.n.a.r." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- This attribute controls the Chrome action bar color on mobile devices -->
+  <meta name="theme-color" content="#000000">
+  <!-- Css files involved, including the local css and FontAwesome v5 -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/x-icon" href="images/logo_favicon.png" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
+
 <body>
-<!-- Navbar -->
-<nav class="nav container void-background">
-	<!-- This "nav-menu" is hidden on mobile -->
-	<!-- Add the modifier "is-active" to display it on mobile -->
-	<div class="nav-left">
-		<a href="https://github.com/ianfra2101" class="nav-item">
-			<span>Github</span>
-		</a>
-		<a href="https://twitter.com/ianfra99" class="nav-item">
-			<span>X</span>
-		</a>
-		<a href="https://discordapp.com/users/615117986428223489" class="nav-item" target="_blank">
-			<span>Discord</span>
-		</a>
-	</div>
 
-	<div class="nav-right nav-menu">
-		<a class="nav-item" href="#about">About</a>
-		<a class="nav-item" href="#projects">Works & Projects</a>
-		<a class="nav-item" href="#additional">Hobbies</a>
-		<a class="nav-item" href="#contact">Contact Me</a>
-	</div>
+<!-- Particles.js container used as a background. Removing it removes the particles -->
+<div id="particles-js"></div>
+<!-- Wrapper -->
+<div id="wrapper">
 
-	<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
-	<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-	<span class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </span>
-</nav>
+  <!-- Header - a logo, a short sentence -->
+  <header id="header" class="alt">
+    <span class="logo"><img src="images/logo_site.png" alt="" /></span>
+    <p>A biologist in a world of developers</p>
 
-<!-- About Me -->
-<section id="about" class="section section-1">
-	<div class="container">
-		<div class="profile-wrapper">
-			<!-- Source: https://flic.kr/p/pAZBNK -->
-			<div class="avatar-frame">
-				<img class="avatar" src="assets/img/profile_pic.jpg">
-			</div>
-			<div class="terminal-box">
-				<div class="terminal-text">
-					<h2 style="font-size: 36px;">Hi, I am Franz</h2>
-				</div>
-			</div>
-			<p class="description">
-			</p>
-		</div>
-	</div>
-</section>
+    <!-- A set of social media and quick links. Up to four links are supported -->
+    <ul class="icons">
+      <!-- A set of social media and quick links. Up to four links are supported -->
+      <!-- A set of social media and quick links. Up to four links are supported -->
+      <!-- A set of social media and quick links. Up to four links are supported -->
+      <ul class="icons">
+        <li><a href="https://github.com/ianfra2101" target="_blank" class="fab fa-github fa-2x"></a></li>
+        <li><a href="https://twitter.com/ianfra99" target="_blank" class="fas fa-times fa-2x"></a></li>
+        <li><a href="https://www.instagram.com/_tempestaperfetta_/" target="_blank" class="fab fa-instagram fa-2x"></a></li>
+      </ul>
 
-<!-- Projects -->
-<section id="projects" class="section section-2">
-	<div class="container">
-		<div class="has-text-centered">
-			<h3 class="title is-3">My Works and Projects</h3>
-		</div>
-		<div class="columns is-multiline is-desktop">
-			<div class="column">
-				<div class="box project-text">
-					<article>
-						<div>
-							<figure class="image project-figure">
-								<img src="assets/img/logo_progetto_1.png" alt="Project 1">
-							</figure>
-						</div>
-						<div>
-							<p>
-								During 2023, I developed the website for REIM - Register of Intangible Heritage of Molise, using the CMS WordPress.
-							</p>
-						</div>
-					</article>
-				</div>
-			</div>
-			<div class="column">
-				<div class="box project-text">
-					<article>
-						<div>
-							<figure class="image project-figure">
-								<img src="assets/img/logo_progetto_2.png" alt="Project 2">
-							</figure>
-						</div>
-						<div>
-							<p>
-								Between late 2023 and early 2024, I focused on developing the update for the Larino Carnival 2024 application.
-							</p>
-						</div>
-					</article>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+  </header>
 
-<!-- Additional Section -->
-<section id="additional" class="section section-3">
-	<div class="container">
-		<div class="has-text-centered">
-			<h3 class="title is-3">Hobbies</h3>
-		</div>
-		<div class="columns is-multiline is-desktop">
-			<div class="column">
-				<div class="box additional-box">
-					<article>
-						<div class="icon has-text-centered">
-							<i class="fa fa-code"></i>
-						</div>
-						<div class="content">
-							<h4 class="title is-4" style="color: white;">Coding</h4>
-							<p style="color: white;">I love coding, and every day I strive to learn new skills. Primarily, I enjoy working with Python.</p>
-						</div>
-					</article>
-				</div>
-			</div>
-			<div class="column">
-				<div class="box additional-box">
-					<article>
-						<div class="icon has-text-centered">
-							<i class="fa fa-television"></i>
-						</div>
-						<div class="content">
-							<h4 class="title is-4" style="color: white;">Watching anime & read mangas</h4>
-							<p style="color: white;">One of my hobbies is watching anime and reading manga.</p>
-						</div>
-					</article>
-				</div>
-			</div>
-			<div class="column">
-				<div class="box additional-box">
-					<article>
-						<div class="icon has-text-centered">
-							<i class="fa fa-gamepad"></i>
-						</div>
-						<div class="content">
-							<h4 class="title is-4" style="color: white;">Gaming</h4>
-							<p style="color: white;">Another one of my hobbies is gaming. One of my favorite video game sagas without a doubt is the Pokemon series.</p>
-						</div>
-					</article>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+  <!-- Nav - navbar of contents, used in the desktop version -->
+  <nav id="nav">
+    <ul>
+      <li><a href="#intro" class="active">Who are you?</a></li>
+      <li><a href="#projects">Works & Projects</a></li>
+      <li><a href="#skills">A Little Bit About Me</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
 
-<!-- Contact Me -->
-<section id="contact" class="section section-5">
-	<div class="container">
-		<div class="has-text-centered">
-			<h3 class="title is-3">Contact Me</h3>
-		</div>
-		<div class="columns is-centered">
-			<div class="column is-half">
-				<div class="box">
-					<article>
-						<div class="content has-text-centered" style="color: white;"> <!-- Aggiunto il colore del testo bianco -->
-							<p>Contact me or explore my works:</p>
-							<div class="social-links">
-								<a href="https://github.com/ianfra2101" class="social-link" target="_blank">
-									<i class="fab fa-github"></i>
-								</a>
-								<a href="https://t.me/bionerd47" class="social-link" target="_blank">
-									<i class="fab fa-telegram"></i>
-								</a>
-								<a href="https://discordapp.com/users/615117986428223489" class="social-link" target="_blank">
-									<i class="fab fa-discord"></i>
-								</a>
-								<a href="mailto:iannuccifranz@gmail.com" class="social-link" target="_blank">
-									<i class="fas fa-envelope"></i>
-								</a>
-							</div>
-						</div>
-					</article>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+  <!-- Main - the "white part" -->
+  <div id="main">
+
+    <!-- Introduction - an image and a bio -->
+    <section id="intro" class="main special">
+      <div class="spotlight">
+        <div class="content">
+          <header class="major">
+            <h2><b>WHO ARE YOU?</b></h2>
+          </header>
+          <p id="me">Hey hey, I'm Franz, the 25-year-old biology buff who's secretly a computer wizard in disguise! Don't let the lab coat fool you, I'm all about coding shenanigans and bio-hacks. From DNA to algorithms, I'm your go-to guy for mixing science with a sprinkle of geekiness. Whether I'm dissecting frogs or debugging code, I'm always up for a challenge and a good laugh. Let's bio-hack our way to greatness!</p>
+        </div>
+        <span class="image"><img src="images/profile_pic.jpg" alt="" /></span>
+      </div>
+    </section>
+
+    <!-- Projects - small introduction, list of projects -->
+    <section id="projects" class="main special">
+      <header class="major">
+        <h2><b>MY WORKS & PROJECTS</b></h2>
+        <p>I was part of some collaborations, and I worked on various different projects.<br />
+          Here's a list of my favorites!</p>
+      </header>
+
+      <!-- A small description, an image and a link. Nothing more. Other entries can be added -->
+      <div class="spotlight">
+        <div class="content">
+          <header class="major">
+            <h3><b>REIM - Register of Intangible Heritage of Molise</b></h3>
+          </header>
+          <div>
+            <span class="image-small"><img src="images/logo_progetto_1.png" alt="" /></span>
+            <p>
+              During 2023, I contributed to the development of the website for REIM - Register of Intangible Heritage of Molise, using the CMS WordPress.
+            </p>
+          </div>
+          <a href="https://www.ichmolise.eu/" class="button small" target="_blank">Click to view!</a>
+        </div>
+      </div>
+
+      <div class="spotlight">
+        <div class="content">
+          <header class="major">
+            <h3><b>Update of the Larino Carnival 2024 application</b></h3>
+          </header>
+          <div>
+            <span class="image-small"><img src="images/logo_progetto_2.png" alt="" /></span>
+            <p>
+              Between late 2023 and early 2024, I dedicated my efforts to developing the update for the Larino Carnival 2024 application, thereby contributing to the evolution of the application. Specifically, I developed certain sections related to the update.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=it.unimol.larino" class="button small" target="_blank">Click for the app</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 
-<!-- Footer -->
-<section class="section-6 has-text-centered container">
-	<a href="https://beacons.ai/ianfra">SHARE MY BEACON! - Franz Iannucci</a>
-</section>
 
-<script>
-	const aboutText = "Biologist by day, coding enthusiast by night! Navigating through cells and code with equal zeal, I'm on a mission to merge biology and tech in exciting ways. Let's explore this awesome crossover together!";
 
-	let index = 0;
-	const speed = 25; // Imposta la velocità desiderata in millisecondi per carattere
 
-	function writeText() {
-		const aboutElement = document.querySelector('.terminal-text');
-		if (index < aboutText.length) {
-			aboutElement.innerHTML += aboutText.charAt(index);
-			index++;
-			setTimeout(writeText, speed);
-		}
-	}
 
-	document.addEventListener('DOMContentLoaded', function () {
-		const aboutSection = document.getElementById('about');
-		const observer = new IntersectionObserver(entries => {
-			entries.forEach(entry => {
-				const id = entry.target.getAttribute('id');
-				if (entry.intersectionRatio > 0) {
-					document.querySelector(`nav a[href="#${id}"]`).parentElement.classList.add('is-active');
-				} else {
-					document.querySelector(`nav a[href="#${id}"]`).parentElement.classList.remove('is-active');
-				}
-			});
-		});
 
-		// Track all sections that have an `id` applied
-		document.querySelectorAll('section[id]').forEach((section) => {
-			observer.observe(section);
-		});
 
-		writeText();
-	});
-</script>
-</body>
+
+    <!-- Skills - list of scopes and related skills -->
+    <section id="skills" class="main special">
+      <header class="major">
+        <h2><b>A LITTLE BIT ABOUT ME</b></h2>
+      </header>
+
+      <!-- Other entries can be added to the list of scopes and to the list of skills
+      The icons are from FontAwesome v5: choose one from their site and type its name to use it -->
+      <h2 style="font-size: 1.5em;"><i class="fas fa-code"></i><b>Hobbies</b></h2> <!-- Impostare la dimensione del carattere come desiderato -->
+      <ul class="features outline">
+        <li>Coding</li>
+        <li>Watch anime and read mangas</li>
+        <li>Gaming</li>
+      </ul>
+    </section>
+
+    <!-- Fun Facts - list of interesting facts about the person -->
+    <section id="funfacts" class="main special">
+      <header class="major">
+        <h2 style="font-size: 1.5em;"><b><i class="fas fa-lightbulb"></i> Fun Facts</b></h2> <!-- Set the font size as desired -->
+      </header>
+      <ul class="facts">
+        <li>I'm a Formula 1 enthusiast, and I support Ferrari.</li>
+        <li>I've been playing Yu-Gi-Oh since I was a kid.</li>
+        <li>My favorite video game series is "Assassin's Creed".</li>
+        <li>My nickname on Telegram comes from biology and the fact that I'm a nerd.</li>
+        <li>I always smoke a cigar at weddings.</li>
+      </ul>
+    </section>
+
+
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="main special" style="margin-bottom: 100px;"> <!-- Aggiunto un margine inferiore -->
+      <header class="major">
+        <h2><b>Contact Me</b></h2>
+        <p>Contact me or explore my works:</p>
+      </header>
+      <ul class="icons">
+        <li><a href="https://github.com/ianfra2101" target="_blank" class="fab fa-github fa-2x"></a></li>
+        <li><a href="https://t.me/bionerd47" target="_blank" class="fab fa-telegram fa-2x"></a></li>
+        <li><a href="https://discord.com/users/615117986428223489" target="_blank" class="fab fa-discord fa-2x"></a></li>
+        <li><a href="mailto:iannuccfranz@gmail.com" class="fas fa-envelope fa-2x"></a></li>
+
+      </ul>
+
+      <!-- Footer - minimal, with a copyright line and a back to top button -->
+      <footer id="footer" class="align-footer" style="margin-top: 100px;"> <!-- Aggiunto un margine superiore -->
+        <div>
+          <p class="share-text"><a href="https://beacons.ai/ianfra">SHARE MY BEACON - FRANZ IANNUCCI</a></p>
+        </div>
+      </footer>
+
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Variables to change to correctly generate the initial description and other informations
+    birthYear = 1999; // Year of birth
+    birthMonth = 1; // Month of birth, without leading zero
+    birthDay = 21; // Day of birth, without leading zero
+    experienceStart = 2011; // Year from which the experience starts (e.g. when I wrote my first line of code)
+    date = new Date();
+    year = date.getFullYear();
+    experience = year - experienceStart;
+
+    // Assign the years of experience in the statistics
+    document.getElementById('experience').innerHTML = experience;
+
+    // Assign the current year to the copyright line
+    document.getElementById('year').innerHTML = year;
+
+    if ((date.getMonth() + 1 < birthMonth && date.getDate() <= birthDay) || date.getMonth() < birthMonth)
+      year--;
+    age = year - birthYear;
+    // The initial description. It is meant to be modified freely
+    me = "Hey hey, I'm Franz, the " + age + "-year-old biology buff who's secretly a computer wizard in disguise! " +
+            "Don't let the lab coat fool you, I'm all about coding shenanigans and bio-hacks. From DNA to algorithms, " +
+            "I'm your go-to guy for mixing science with a sprinkle of geekiness. Whether I'm dissecting frogs or debugging " +
+            "code, I'm always up for a challenge and a good laugh. Let's bio-hack our way to greatness!";
+
+    // Assign the description to the correct html element, given its id
+    document.getElementById('me').innerHTML = me;
+
+    // Zoom effect for images
+    const images = document.querySelectorAll('.image-wrapper img');
+    images.forEach(img => {
+      img.addEventListener('click', function () {
+        img.classList.toggle('zoomed');
+      });
+    });
+  </script>
+
+
+
+
 </html>
