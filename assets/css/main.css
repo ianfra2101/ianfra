@@ -3861,6 +3861,11 @@ input, select, textarea {
 	align-items: center;
 }
 
+#footer * {
+	font-size: 14px; /* Riduce la dimensione del carattere per tutti gli elementi nel footer */
+}
+
+
 /* Aggiorna il CSS per la galleria di immagini */
 
 .image-gallery {
