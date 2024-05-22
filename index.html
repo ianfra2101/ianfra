@@ -1,255 +1,130 @@
 <!DOCTYPE html>
-<!-- Using multiple languages is possible, but the page is english only atm -->
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <!-- Title in the browser tab -->
-  <title>f.r.a.n.z.</title>
-  <!-- Description used when the site is added to favorites -->
-  <meta name="description" content="f.r.a.n.z. official site.">
-  <meta name="author" content="f.r.a.n.z." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <!-- This attribute controls the Chrome action bar color on mobile devices -->
-  <meta name="theme-color" content="#000000">
-  <!-- Css files involved, including the local css and FontAwesome v5 -->
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="shortcut icon" type="image/x-icon" href="images/logo_favicon.png" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J74PVMP6WH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J74PVMP6WH');
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/logo_favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Franz Iannucci</title>
 </head>
-
 <body>
-
-<!-- Particles.js container used as a background. Removing it removes the particles -->
-<div id="particles-js"></div>
-<!-- Wrapper -->
-<div id="wrapper">
-
-  <!-- Header - a logo, a short sentence -->
-  <header id="header" class="alt">
-    <span class="logo"><img src="images/logo_site.png" alt="" /></span>
-    <p>A biologist in a world of developers</p>
-
-    <!-- A set of social media and quick links. Up to four links are supported -->
-    <ul class="icons">
-      <!-- A set of social media and quick links. Up to four links are supported -->
-      <!-- A set of social media and quick links. Up to four links are supported -->
-      <!-- A set of social media and quick links. Up to four links are supported -->
-      <ul class="icons">
-        <li><a href="https://github.com/ianfra2101" target="_blank" class="fab fa-github fa-2x"></a></li>
-        <li><a href="https://twitter.com/ianfra99" target="_blank" class="fas fa-times fa-2x"></a></li>
-        <li><a href="https://www.instagram.com/_tempestaperfetta_/" target="_blank" class="fab fa-instagram fa-2x"></a></li>
-      </ul>
-
-  </header>
-
-  <!-- Nav - navbar of contents, used in the desktop version -->
-  <nav id="nav">
-    <ul>
-      <li><a href="#intro" class="active">Who are you?</a></li>
-      <li><a href="#projects">My Works & Projects</a></li>
-      <li><a href="#skills">A Little Bit About Me</a></li>
-      <li><a href="#contact">Contact Me</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main - the "white part" -->
-  <div id="main">
-
-    <!-- Introduction - an image and a bio -->
-    <section id="intro" class="main special">
-      <div class="spotlight">
-        <div class="content">
-          <header class="major">
-            <h2><b>WHO ARE YOU?</b></h2>
-          </header>
-          <p id="me">Hey hey, I'm Franz, the 25-year-old biology buff who's secretly a computer wizard in disguise! Don't let the lab coat fool you, I'm all about coding shenanigans and bio-hacks. From DNA to algorithms, I'm your go-to guy for mixing science with a sprinkle of geekiness. Whether I'm dissecting frogs or debugging code, I'm always up for a challenge and a good laugh. Let's bio-hack our way to greatness!</p>
+    <header class="profile container">
+        <i class="ri-moon-line change-theme" id="theme-button"></i>
+        <div class="profile__container grid">
+            <div class="profile__data">
+                <div class="profile__border">
+                    <div class="profile__perfil">
+                        <img src="assets/img/profile_pic.png" alt="">
+                    </div>
+                </div>
+                <h2 class="profile__name">Franz Iannucci</h2>
+                <h3 class="profile__profession">A biologist in a world of developers</h3>
+                <ul class="profile__social">
+                    <a href="mailto:iannuccifranz@gmail.com" class="profile__social-link">
+                        <i class="ri-mail-line"></i>
+                    </a>
+                    <a href="https://discord.com/users/615117986428223489" target="_blank" class="profile__social-link">
+                        <i class="ri-discord-line"></i>
+                    </a>
+                    <a href="https://t.me/bionerd47" target="_blank" class="profile__social-link">
+                        <i class="ri-telegram-line"></i>
+                    </a>
+                    <a href="https://github.com/ianfra2101" target="_blank" class="profile__social-link">
+                        <i class="ri-github-line"></i>
+                    </a>
+                </ul>
+            </div>
+            <div class="profile__buttons">
+                <!-- Insert your CV -->
+                <a download="" href="" class="button">
+                    My Beacon<i class="ri-git-branch-line"></i> 
+                </a>
         </div>
-        <span class="image"><img src="images/profile_pic.png" alt="" /></span>
-      </div>
-    </section>
-
-    <!-- Projects - small introduction, list of projects -->
-    <section id="projects" class="main special">
-      <header class="major">
-        <h2><b>MY WORKS & PROJECTS</b></h2>
-        <p>I was part of some collaborations, and I worked on various different projects.<br />
-          Here's a list of my favorites!</p>
-      </header>
-
-      <!-- A small description, an image and a link. Nothing more. Other entries can be added -->
-      <div class="spotlight">
-        <div class="content">
-          <header class="major">
-            <h3><b>REIM - Register of Intangible Heritage of Molise</b></h3>
-          </header>
-          <div>
-            <span class="image-small"><img src="images/logo_progetto_1.png" alt="" /></span>
-            <p>
-              During 2023, I contributed to the development of the website for REIM - Register of Intangible Heritage of Molise, using the CMS WordPress.
-            </p>
-          </div>
-          <a href="https://www.ichmolise.eu/" class="button small" target="_blank">Click to view!</a>
-        </div>
-      </div>
-
-      <div class="spotlight">
-        <div class="content">
-          <header class="major">
-            <h3><b>Update of the Larino Carnival 2024 application</b></h3>
-          </header>
-          <div>
-            <span class="image-small"><img src="images/logo_progetto_2.png" alt="" /></span>
-            <p>
-              Between late 2023 and early 2024, I dedicated my efforts to developing the update for the Larino Carnival 2024 application, thereby contributing to the evolution of the application. Specifically, I developed certain sections related to the update.
-            </p>
-            <a href="https://play.google.com/store/apps/details?id=it.unimol.larino" class="button small" target="_blank">Click for the app!</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-    <!-- Skills - list of scopes and related skills -->
-    <section id="skills" class="main special">
-      <header class="major">
-        <h2><b>A LITTLE BIT ABOUT ME</b></h2>
-      </header>
-
-      <!-- Other entries can be added to the list of scopes and to the list of skills
-      The icons are from FontAwesome v5: choose one from their site and type its name to use it -->
-      <h2 style="font-size: 1.5em;"><i class="fas fa-code"></i><b>Hobbies</b></h2> <!-- Impostare la dimensione del carattere come desiderato -->
-      <ul class="features outline">
-        <li>Coding</li>
-        <li>Watch anime and read mangas</li>
-        <li>Gaming</li>
-      </ul>
-    </section>
-
-  <!-- Fun Facts - list of interesting facts about the person -->
-  <section id="funfacts" class="main special">
-    <header class="major">
-      <h2 style="font-size: 1.5em; text-align: center;"><b><i class="fas fa-lightbulb"></i> Fun Facts</b></h2>
     </header>
-    <ul class="facts" style="list-style-type: none; padding-left: 0; text-align: center;">
-      <li style="margin-bottom: 15px; font-size: 1.2em;">
-        <span style="display: inline-block; margin-right: 10px;">&bull;</span>
-        I'm a Formula 1 enthusiast, and I support Ferrari.
-      </li>
-      <li style="margin-bottom: 15px; font-size: 1.2em;">
-        <span style="display: inline-block; margin-right: 10px;">&bull;</span>
-        I've been playing Yu-Gi-Oh since I was a kid.
-      </li>
-      <li style="margin-bottom: 15px; font-size: 1.2em;">
-        <span style="display: inline-block; margin-right: 10px;">&bull;</span>
-        My favorite video game series is "Assassin's Creed".
-      </li>
-      <li style="margin-bottom: 15px; font-size: 1.2em;">
-        <span style="display: inline-block; margin-right: 10px;">&bull;</span>
-        My nickname on Telegram comes from biology and the fact that I'm a nerd.
-      </li>
-      <li style="margin-bottom: 15px; font-size: 1.2em;">
-        <span style="display: inline-block; margin-right: 10px;">&bull;</span>
-        I always smoke a cigar at weddings.
-      </li>
-    </ul>
-  </section>
-  
-  
-  
-  
-  
-  
-  
-  
+    <main class="main">
+        <section class="filters container">
+            <ul class="filters__content">
+                <button class="filters__button filter-tab-active" data-target="#projects">
+                    Projects
+                </button>
+                <button class="filters__button" data-target="#about">
+                    About Me
+                </button>
+            </ul>
+            <div class="filters__sections">
+                <div class="projects__content grid filters__active" data-content id="projects">
+                    
+                    <article class="projects__card">
+                        <img src="assets/img/logo_progetto_1.png" alt="" class="projects__img">
+                        <div class="projects__modal">
+                          <div>
+                            <span class="projects__subtitle">Web</span>
+                            <h3 class="projects__title">REIM - Register of Intangible Heritage of Molise</h3>
+                            <p class="projects__description">During 2023, I contributed to the development of the website for REIM - Register of Intangible Heritage of Molise, using the CMS WordPress.</p>
+                            <a href="https://www.ichmolise.eu/" class="projects__button button button__small">
+                              <i class="ri-link"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </article>
 
-
-
-
-
-    <!-- Contact Me Section -->
-    <section id="contact" class="main special" style="margin-bottom: 100px;"> <!-- Aggiunto un margine inferiore -->
-      <header class="major">
-        <h2><b>Contact Me</b></h2>
-        <p>Contact  me or explore my works:</p>
-      </header>
-      <ul class="icons">
-        <li><a href="https://github.com/ianfra2101" target="_blank" class="fab fa-github fa-2x"></a></li>
-        <li><a href="https://t.me/bionerd47" target="_blank" class="fab fa-telegram fa-2x"></a></li>
-        <li><a href="https://discord.com/users/615117986428223489" target="_blank" class="fab fa-discord fa-2x"></a></li>
-        <li><a href="mailto:iannuccfranz@gmail.com" class="fas fa-envelope fa-2x"></a></li>
-
-      </ul>
-
-      <!-- Footer - minimal, with a copyright line and a back to top button -->
-      <footer id="footer" class="align-footer" style="margin-top: 100px;"> <!-- Aggiunto un margine superiore -->
-        <div>
-          <p class="share-text"><a href="https://beacons.ai/ianfra">SHARE MY BEACON - FRANZ IANNUCCI</a></p>
-        </div>
-      </footer>
-
-
+                    <article class="projects__card">
+  <img src="assets/img/logo_progetto_2.png" alt="" class="projects__img">
+  <div class="projects__modal">
+    <div>
+      <span class="projects__subtitle">App</span>
+      <h3 class="projects__title">Update of the Larino Carnival 2024 application</h3>
+      <p class="projects__description">Between late 2023 and early 2024, I dedicated my efforts to developing the update for the Larino Carnival 2024 application, thereby contributing to the evolution of the application. Specifically, I developed certain sections related to the update.</p>
+      <a href="https://play.google.com/store/apps/details?id=it.unimol.larino" class="projects__button button button__small">
+        <i class="ri-link"></i>
+      </a>
+    </div>
   </div>
-
-  <!-- Scripts -->
-  <script src="assets/js/particles.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script>
-    // Variables to change to correctly generate the initial description and other informations
-    birthYear = 1999; // Year of birth
-    birthMonth = 1; // Month of birth, without leading zero
-    birthDay = 21; // Day of birth, without leading zero
-    experienceStart = 2011; // Year from which the experience starts (e.g. when I wrote my first line of code)
-    date = new Date();
-    year = date.getFullYear();
-    experience = year - experienceStart;
-
-    // Assign the years of experience in the statistics
-    document.getElementById('experience').innerHTML = experience;
-
-    // Assign the current year to the copyright line
-    document.getElementById('year').innerHTML = year;
-
-    if ((date.getMonth() + 1 < birthMonth && date.getDate() <= birthDay) || date.getMonth() < birthMonth)
-      year--;
-    age = year - birthYear;
-    // The initial description. It is meant to be modified freely
-    me = "Hey hey, I'm Franz, the " + age + "-year-old biology buff who's secretly a computer wizard in disguise! " +
-            "Don't let the lab coat fool you, I'm all about coding shenanigans and bio-hacks. From DNA to algorithms, " +
-            "I'm your go-to guy for mixing science with a sprinkle of geekiness. Whether I'm dissecting frogs or debugging " +
-            "code, I'm always up for a challenge and a good laugh. Let's bio-hack our way to greatness!";
-
-    // Assign the description to the correct html element, given its id
-    document.getElementById('me').innerHTML = me;
-
-    // Zoom effect for images
-    const images = document.querySelectorAll('.image-wrapper img');
-    images.forEach(img => {
-      img.addEventListener('click', function () {
-        img.classList.toggle('zoomed');
-      });
-    });
-  </script>
-
-
-
-
+</article>
+                </div>
+                <section class="about__content grid" data-content id="about">
+                    <div class="about__bio">
+                        <h3 class="about__title">About Me</h3>
+                        <p class="about__description">
+                            Hi, I'm Franz! I'm 25 years old and currently diving into the wonders of Biological Sciences at the University of Molise (Unimol). But let's be honest, I've been a biology nerd for as long as I can remember. Whether it's peering through a microscope or just marveling at the natural world, biology has always been my thing.
+                        </p>
+                    </div>
+                    <div class="about__interests">
+                        <h3 class="about__title">Interests</h3>
+                        <div class="about__icons">
+                            <div class="about__icon">
+                                <i class="ri-tv-2-fill"></i>
+                                <p class="about__icon-description">Anime</p>
+                            </div>
+                            <div class="about__icon">
+                                <i class="ri-book-line"></i>
+                                <p class="about__icon-description">Manga</p>
+                            </div>
+                            <div class="about__icon">
+                                <i class="ri-steering-2-line"></i>
+                                <p class="about__icon-description">Formula One</p>
+                            </div>
+                            <div class="about__icon">
+                                <i class="ri-code-line"></i>
+                                <p class="about__icon-description">Coding</p>
+                            </div>
+                            <div class="about__icon">
+                                <i class="ri-gamepad-line"></i>
+                                <p class="about__icon-description">Gaming</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer class="footer container">
+        <span class="footer__copy">
+            &#169; Franz Iannucci. All rights reserved
+        </span>
+    </footer>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
