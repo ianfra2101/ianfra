@@ -452,6 +452,7 @@ body.dark-theme {
   .profile__info {
     column-gap: 1.5rem;
   }
+
   .profile__buttons {
     flex-direction: column;
     row-gap: 1rem;
@@ -475,6 +476,7 @@ body.dark-theme {
   }
 }
 
+/* For medium-large devices */
 @media screen and (min-width: 776px) {
   .projects__content,
   .skills__content {
@@ -502,53 +504,37 @@ body.dark-theme {
   .profile {
     padding-top: 4rem;
   }
+
   .profile__border {
     width: 135px;
     height: 135px;
     margin-bottom: 1rem;
   }
+
   .profile__perfil {
     width: 200px;
     height: 200px;
   }
+
   .profile__perfil img {
     width: 100px;
   }
+
   .profile__profession {
     margin-bottom: 1.5rem;
   }
+
   .profile__info {
     column-gap: 3rem;
   }
+
   .profile__info-description {
     font-size: var(--small-font-size);
   }
+
   .profile__buttons {
     column-gap: 2rem;
   }
-
-  .profile__button {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.5rem 1rem; /* Adjust padding to make the button smaller */
-    font-size: 0.875rem; /* Adjust font size to make the text smaller */
-    border: none;
-    border-radius: 0.25rem; /* Adjust border-radius for a rounded button */
-    background-color: var(--first-color);
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-decoration: none; /* Remove underline */
-}
-
-.profile__button i {
-    margin-right: 0.5rem; /* Adjust space between icon and text */
-}
-
-.profile__button:hover {
-    background-color: var(--first-color-alt); /* Adjust hover color */
-}
-
 
   .projects__content {
     gap: 2rem 3rem;
@@ -558,16 +544,14 @@ body.dark-theme {
     display: flex;
     flex-direction: column;
   }
-  
+
   .projects__description {
-    margin-bottom: 0.5rem; /* Aggiungi spazio sotto la descrizione */
+    margin-bottom: 0.5rem;
   }
-  
+
   .projects__button {
-    margin-top: 1rem; /* Aggiungi spazio sopra il pulsante */
+    margin-top: 1rem;
   }
-  
-  
 
   .skills__title {
     font-size: var(--normal-font-size);
@@ -578,7 +562,6 @@ body.dark-theme {
     margin: 4.5rem 0 2.5rem;
   }
 }
-
 /*=============== ABOUT ME ===============*/
 .about__content {
   row-gap: 3.5rem;
