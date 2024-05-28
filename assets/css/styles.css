@@ -602,6 +602,7 @@ body.dark-theme {
 /*=============== ABOUT ME ===============*/
 .about__content {
   row-gap: 3.5rem;
+  padding: 0 1rem; /* Aggiungi padding laterale per piccoli schermi */
 }
 
 .about__title {
@@ -660,4 +661,36 @@ body.dark-theme {
   font-size: var(--small-font-size);
   color: var(--text-color-light);
   text-align: center;
+}
+
+/* Responsive adjustments for mobile devices */
+@media screen and (max-width: 576px) {
+  .about__bio, 
+  .about__interests {
+    padding: 1.5rem;
+  }
+
+  .about__icons {
+    flex-direction: column; /* Change icons layout to column */
+    gap: 1rem;
+  }
+
+  .about__icon i {
+    font-size: 2rem; /* Slightly reduce icon size for better fit */
+  }
+
+  .about__icon-description {
+    font-size: var(--smaller-font-size); /* Adjust text size */
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about__bio, 
+  .about__interests {
+    padding: 1rem;
+  }
+
+  .about__description {
+    font-size: var(--small-font-size); /* Reduce text size for very small screens */
+  }
 }
